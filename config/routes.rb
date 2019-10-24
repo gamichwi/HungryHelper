@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   #renders a form in the browser
   get '/signup' => 'users#new'
   #receive the form and create the user in the db
-  get '/users' => 'users#create'
+  post '/users/create' => 'users#create'
 
   # these routes are for showing users a login form, logging them in, and logging them out.
   get '/login' => 'sessions#new'
@@ -12,3 +12,12 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
 end
+
+
+# # these routes are for showing users a login form, logging them in, and logging them out.
+# get '/login' => 'sessions#new'
+# post '/login' => 'sessions#create'
+# get '/logout' => 'sessions#destroy'
+#
+# get '/signup' => 'users#new'
+# post '/users' => 'users#create'

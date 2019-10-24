@@ -1,8 +1,5 @@
 class UsersController < ApplicationController
 
-  #require login
-  before_filter :authorize
-
   def new
   end
 
@@ -15,9 +12,11 @@ class UsersController < ApplicationController
       redirect_to '/signup'
     end
   end
+
   private
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
+
 end
