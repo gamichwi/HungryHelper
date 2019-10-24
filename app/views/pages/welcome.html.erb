@@ -1,0 +1,33 @@
+<div class="wrap"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-12"><h2>Where would you like to eat?</h2></div>
+    <div class="col-12">
+      <div id="custom-search-input">
+        <div class="input-group">
+
+
+            <input id="autocomplete" name="autocomplete" type="text"  class="form-control" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+
+
+          <input type="hidden" name="lat">
+          <input type="hidden" name="long">
+
+
+          $(document).ready(function() {
+          <script>
+              var input = document.getElementById('autocomplete');
+              var autocomplete = new google.maps.places.Autocomplete(input,{types: ['(cities)']});
+              google.maps.event.addListener(autocomplete, 'place_changed', function(){
+                  var place = autocomplete.getPlace();
+              })
+          </script>
+          });
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
