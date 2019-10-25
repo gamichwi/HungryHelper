@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :autocomplettes
+  resources :autocompletes
   root to: 'pages#welcome'
 
   #renders a form in the browser

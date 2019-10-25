@@ -1,6 +1,6 @@
-class CreateAutocomplettes < ActiveRecord::Migration[6.0]
+class CreateAutocompletes < ActiveRecord::Migration[6.0]
   def change
-    create_table :autocomplettes do |t|
+    create_table :autocompletes do |t|
       t.string :address
       t.integer :street_number
       t.string :locality
