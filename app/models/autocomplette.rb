@@ -1,0 +1,2 @@
+class Autocomplette < ApplicationRecord
+end

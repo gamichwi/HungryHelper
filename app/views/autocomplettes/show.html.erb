@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @autocomplette.address %>
+</p>
+
+<p>
+  <strong>Street number:</strong>
+  <%= @autocomplette.street_number %>
+</p>
+
+<p>
+  <strong>Locality:</strong>
+  <%= @autocomplette.locality %>
+</p>
+
+<p>
+  <strong>Route:</strong>
+  <%= @autocomplette.route %>
+</p>
+
+<p>
+  <strong>Administrative area level 1:</strong>
+  <%= @autocomplette.administrative_area_level_1 %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @autocomplette.country %>
+</p>
+
+<p>
+  <strong>Postal code:</strong>
+  <%= @autocomplette.postal_code %>
+</p>
+
+<%= link_to 'Edit', edit_autocomplette_path(@autocomplette) %> |
+<%= link_to 'Back', autocomplettes_path %>

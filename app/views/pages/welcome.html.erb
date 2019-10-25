@@ -7,23 +7,24 @@
         <div class="input-group">
 
 
-            <input id="autocomplete" name="autocomplete" type="text"  class="form-control" placeholder="Search" aria-label="Search">
-            <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+          <script>
+              $(document).ready(function () {
+                  let input = document.getElementById('autocomplete');
+                  let autocomplete = new google.maps.places.Autocomplete(input, {types: ['(cities)']});
+                  google.maps.event.addListener(autocomplete, 'place_changed', function () {
+                      let place = autocomplete.getPlace();
+                  })
+              });
+          </script>
+
+
+          <input id="autocomplete" name="autocomplete" type="text" class="form-control" placeholder="Search" aria-label="Search">
+          <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
 
 
           <input type="hidden" name="lat">
           <input type="hidden" name="long">
 
-
-          $(document).ready(function() {
-          <script>
-              var input = document.getElementById('autocomplete');
-              var autocomplete = new google.maps.places.Autocomplete(input,{types: ['(cities)']});
-              google.maps.event.addListener(autocomplete, 'place_changed', function(){
-                  var place = autocomplete.getPlace();
-              })
-          </script>
-          });
 
         </div>
       </div>
