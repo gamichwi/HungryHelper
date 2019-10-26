@@ -56,3 +56,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #js gem
 gem 'javascript', '~> 0.0.2'
+
+#for autocomplete
+gem "geocoder"
+gem "figaro"
+gem 'jquery-rails'

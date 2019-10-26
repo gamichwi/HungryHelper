@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :autocompletes
-  root to: 'pages#welcome'
+  root to: 'autocompletes#new'
+  #root to: 'pages#welcome'
 
   #renders a form in the browser
   get '/signup' => 'users#new'
@@ -11,6 +12,11 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
+
+
+
+
+
 
 end
 
