@@ -1,8 +1,6 @@
 class SessionsController < ApplicationController
 
   #require login
-  # before_filter :authorize
-
 
 def create
   user = User.find_by_email(params[:email])

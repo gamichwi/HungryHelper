@@ -6,18 +6,6 @@
       <div id="custom-search-input">
         <div class="input-group">
 
-
-          <script>
-              $(document).ready(function () {
-                  let input = document.getElementById('autocomplete');
-                  let autocomplete = new google.maps.places.Autocomplete(input, {types: ['(cities)']});
-                  google.maps.event.addListener(autocomplete, 'place_changed', function () {
-                      let place = autocomplete.getPlace();
-                  })
-              });
-          </script>
-
-
           <input id="autocomplete" name="autocomplete" type="text" class="form-control" placeholder="Search" aria-label="Search">
           <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
 

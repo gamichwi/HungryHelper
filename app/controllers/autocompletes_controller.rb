@@ -1,4 +1,5 @@
 class AutocompletesController < ApplicationController
+  before_action :authorize
   before_action :set_autocomplete, only: [:show, :edit, :update, :destroy]
 
   # GET /autocompletes
@@ -28,7 +29,7 @@ class AutocompletesController < ApplicationController
 
     respond_to do |format|
       if @autocomplete.save
-        format.html { redirect_to @autocomplete, notice: 'Autocomplete was successfully created.' }
+        format.html { redirect_to @autocomplete, notice: 'A HungryHelper place was successfully created.'}
         format.json { render :show, status: :created, location: @autocomplete }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class AutocompletesController < ApplicationController
   def update
     respond_to do |format|
       if @autocomplete.update(autocomplete_params)
-        format.html { redirect_to @autocomplete, notice: 'Autocomplete was successfully updated.' }
+        format.html { redirect_to @autocomplete, notice: 'A HungryHelper place was successfully updated.' }
         format.json { render :show, status: :ok, location: @autocomplete }
       else
         format.html { render :edit }

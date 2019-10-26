@@ -61,3 +61,6 @@ gem 'javascript', '~> 0.0.2'
 gem "geocoder"
 gem "figaro"
 gem 'jquery-rails'
+
+#for looks
+gem 'materialize-sass', '~> 1.0.0.beta'
