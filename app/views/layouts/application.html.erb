@@ -13,18 +13,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Carter+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAxYcE9cTQCG_Xnb8KpytXZ1lpN2pHznW8" %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAGQ6cQ8nTlmwHb8zxc3is44Tu_cTOrUxA" %>
 
   </head>
 
   <nav class="navbar navbar-dark bg-dark" style="background-color: #e3f2fd;">
     <div class="container">
 <div class="brand">
-  <a href="/" onclick="window.location.reload()" class="text-decoration-none text-reset">HungryHelper</a>
+  <%= link_to "HungryHelper", root_path, class:"text-decoration-none text-reset" %>
     </div>
 <div class="userControls">
       <% if current_user %>
-        Signed is as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+        Signed is as <%= current_user.name %> | <%= link_to "HungryPlaces", '/autocompletes/' %> | <%= link_to "Logout", '/logout' %>
       <% else %>
         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
       <% end %>

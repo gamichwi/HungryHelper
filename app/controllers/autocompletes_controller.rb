@@ -25,10 +25,13 @@ class AutocompletesController < ApplicationController
   # POST /autocompletes
   # POST /autocompletes.json
   def create
+
     @autocomplete = Autocomplete.new(autocomplete_params)
 
     respond_to do |format|
       if @autocomplete.save
+        # check if record exists show list of records else create the record.
+
         format.html { redirect_to @autocomplete, notice: 'A HungryHelper place was successfully created.'}
         format.json { render :show, status: :created, location: @autocomplete }
       else

@@ -1,39 +1,78 @@
 <p id="notice"><%= notice %></p>
-
+<strong>Address:</strong>
+<%= @autocomplete.address %>
+<h1>Find me some food!<place class=""></place></h1>
 <p>
-  <strong>Address:</strong>
-  <%= @autocomplete.address %>
-</p>
 
-<p>
-  <strong>Street number:</strong>
-  <%= @autocomplete.street_number %>
 </p>
+<!--commented out in case I change my mind later-->
+<!--<p>-->
+<!--  <strong>Street number:</strong>-->
+  <%#= @autocomplete.street_number %>
+<!--</p>-->
+<!--<p>-->
+<!--  <strong>Locality:</strong>-->
+  <%#= @autocomplete.locality %>
+<!--</p>-->
+<!--<p>-->
+<!--  <strong>Route:</strong>-->
+  <%#= @autocomplete.route %>
+<!--</p>-->
+<!--<p>-->
+<!--  <strong>Administrative area level 1:</strong>-->
+  <%#= @autocomplete.administrative_area_level_1 %>
+<!--</p>-->
+<!--<p>-->
+<!--  <strong>Country:</strong>-->
+  <%#= @autocomplete.country %>
+<!--</p>-->
+<!--<p>-->
+<!--  <strong>Postal code:</strong>-->
+  <%#= @autocomplete.postal_code %>
+<!--</p>-->
+<%= form_with(model: @autocomplete, local: true, url: restaurants_path) do |form| %>
+  <div class="field">
+    <% form.label :address %>
+    <%= form.hidden_field :address %>
+  </div>
 
-<p>
-  <strong>Locality:</strong>
-  <%= @autocomplete.locality %>
-</p>
+  <div class="field">
+    <%#= form.label :street_number %>
+    <%= form.hidden_field :street_number %>
+  </div>
 
-<p>
-  <strong>Route:</strong>
-  <%= @autocomplete.route %>
-</p>
+  <div class="field">
+    <%#= form.label :locality %>
+    <%= form.hidden_field :locality %>
+  </div>
 
-<p>
-  <strong>Administrative area level 1:</strong>
-  <%= @autocomplete.administrative_area_level_1 %>
-</p>
+  <div class="field">
+    <%#= form.label :route %>
+    <%= form.hidden_field :route %>
+  </div>
 
-<p>
-  <strong>Country:</strong>
-  <%= @autocomplete.country %>
-</p>
+  <div class="field">
+    <%#= form.label :administrative_area_level_1 %>
+    <%= form.hidden_field :administrative_area_level_1 %>
+  </div>
 
-<p>
-  <strong>Postal code:</strong>
-  <%= @autocomplete.postal_code %>
-</p>
+  <div class="field">
+    <%#= form.label :country %>
+    <%= form.hidden_field :country %>
+  </div>
+
+  <div class="field">
+    <%#= form.label :postal_code %>
+    <%= form.hidden_field :postal_code %>
+  </div>
+
+  <div class="actions">
+    <div id="submit" class="btn waves-effect waves-light">
+      <%= form.submit "Go" %>
+    </div>
+  </div>
+
+<% end %>
 
 <%= link_to 'Edit', edit_autocomplete_path(@autocomplete) %> |
 <%= link_to 'Back', autocompletes_path %>

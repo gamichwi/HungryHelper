@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  patch 'restaurants/find' => 'restaurants#find', :as =>'restaurants'
+  get 'restaurants/find' => 'restaurants#find'
+  # resources :restaurants
+
   resources :autocompletes
   root to: 'autocompletes#new'
   #root to: 'pages#welcome'
@@ -9,7 +13,7 @@ Rails.application.routes.draw do
   post '/users/create' => 'users#create'
 
   # these routes are for showing users a login form, logging them in, and logging them out.
-  get '/login' => 'sessions#new'
+  get '/login' => 'sessions#new', :as => 'new_session'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
