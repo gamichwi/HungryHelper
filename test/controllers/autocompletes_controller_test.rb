@@ -1,5 +1,3 @@
-require 'test_helper'
-
 class AutocompletesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @autocomplete = autocompletes(:one)

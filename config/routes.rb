@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  patch 'restaurants/find' => 'restaurants#find', :as =>'restaurants'
-  get 'restaurants/find' => 'restaurants#find'
+  post 'restaurants/find' => 'restaurants#find', :as =>'restaurants'
+  get 'restaurants/show' => 'restaurants#show'
   # resources :restaurants
 
   resources :autocompletes

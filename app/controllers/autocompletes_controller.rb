@@ -1,4 +1,5 @@
 class AutocompletesController < ApplicationController
+
   before_action :authorize
   before_action :set_autocomplete, only: [:show, :edit, :update, :destroy]
 
@@ -24,8 +25,8 @@ class AutocompletesController < ApplicationController
 
   # POST /autocompletes
   # POST /autocompletes.json
-  def create
 
+  def create
     @autocomplete = Autocomplete.new(autocomplete_params)
 
     respond_to do |format|
@@ -73,6 +74,6 @@ class AutocompletesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def autocomplete_params
-      params.require(:autocomplete).permit(:address, :street_number, :locality, :route, :administrative_area_level_1, :country, :postal_code)
+      params.require(:autocomplete).permit(:address, :street_number, :locality, :route, :administrative_area_level_1, :country, :postal_code, :latitude, :longtitude)
     end
 end

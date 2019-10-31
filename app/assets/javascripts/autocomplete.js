@@ -37,7 +37,7 @@
         // debugger
 
         const lng = place['geometry']['location'].lng();
-        const lng_element = document.getElementById(`autocomplete_${'longitude'}`);
+        const lng_element = document.getElementById(`autocomplete_${'longtitude'}`);
         if (lng_element) {
             lng_element.value = lng;
         }
