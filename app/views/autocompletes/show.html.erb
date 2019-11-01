@@ -1,6 +1,6 @@
+<div class="flexbox">
 <p id="notice"><%= notice %></p>
-<strong>Address:</strong>
-<%= @autocomplete.address %>
+<strong>Address:</strong><%= @autocomplete.address %>
 <h1>Find me some food!<place class=""></place></h1>
 <p>
 
@@ -24,5 +24,6 @@
   </div>
 <% end %>
 
-<%= link_to 'Edit', edit_autocomplete_path(@autocomplete) %> |
+<%= link_to 'Edit', edit_autocomplete_path(@autocomplete) %>
 <%= link_to 'Back', autocompletes_path %>
+</div>

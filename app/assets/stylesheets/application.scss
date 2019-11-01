@@ -24,20 +24,47 @@ $secondary-color: color("yellow", "base") !default;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top:1em;
+  //padding:1em;
+  //border: 4px groove #343A40;
+  width: 100%;
+  background-color: ghostwhite;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 .actions {
   text-align: center;
   margin-top: 20px;
 }
 
+nav.navbar {
+  padding-bottom: 20px;
+}
 
 body {
   background-color: rgba(0, 0, 0, 0.5);
-  /*background-image: url(/assets/2959305.jpg);*/
+  background-image: url(/assets/2959305.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
 
+.wrapper {
+  padding: 0 20px;
+  margin:0 9.5px;
+}
+
+img {
+  max-width: 100%}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+img:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .brand {

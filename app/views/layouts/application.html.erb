@@ -29,16 +29,13 @@
         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
       <% end %>
 </div>
-
     </div>
   </nav>
   <body>
-
-
-
+  <div class = "wrapper">
   <%= yield %>
   <%= javascript_include_tag 'application' %>
-
+  </div>
     <footer>
       <nav class="navbar navbar-dark bg-dark fixed-bottom">
         <p><a id="gavin" href="http://www.gavins.xyz" target="_blank">Built by Gavin.</a></p>

@@ -21,7 +21,7 @@ class RestaurantsController < ApplicationController
     rdm = rand(0..(res['results'].count - 1))
 
     # photo = HTTParty.get("https://maps.googleapis.com/maps/api/place/photo?maxwidth=#{width}&photoreference=#{photo_reference}&key=AIzaSyAGQ6cQ8nTlmwHb8zxc3is44Tu_cTOrUxA")
-
+# byebug
     #Restaurant details
     @@restaurant_name = res['results'][rdm]['name']
     @@restaurant_address = res['results'][rdm]['vicinity']
@@ -30,11 +30,11 @@ class RestaurantsController < ApplicationController
     # byebug
     #Photo details
     @@width = res['results'][rdm]['photos'][0]['width']
-    @@html_attributions = res['results'][rdm]['photos'][0]['html_attributions'] #this looks broken - fix it.
+    @@html_attributions = res['results'][rdm]['photos'][0]['html_attributions'] #this looks broken - fix it before using it.
     @@height = res['results'][rdm]['photos'][0]['height']
     @@photo_reference = res['results'][rdm]['photos'][0]['photo_reference']
 
-   byebug
+   # byebug
     redirect_to restaurants_show_path
   end
 
