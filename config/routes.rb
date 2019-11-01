@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
   post 'restaurants/find' => 'restaurants#find', :as =>'restaurants'
   get 'restaurants/show' => 'restaurants#show'
-  # resources :restaurants
 
   resources :autocompletes
   root to: 'autocompletes#new'
-  #root to: 'pages#welcome'
 
   #renders a form in the browser
   get '/signup' => 'users#new'
@@ -16,19 +14,4 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new', :as => 'new_session'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
-
-
-
-
-
-
 end
-
-
-# # these routes are for showing users a login form, logging them in, and logging them out.
-# get '/login' => 'sessions#new'
-# post '/login' => 'sessions#create'
-# get '/logout' => 'sessions#destroy'
-#
-# get '/signup' => 'users#new'
-# post '/users' => 'users#create'
