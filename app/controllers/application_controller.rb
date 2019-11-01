@@ -1,6 +1,5 @@
-require 'pry'
-
 class ApplicationController < ActionController::Base
+  $apikey = "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_SERVER_KEY']}"
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.

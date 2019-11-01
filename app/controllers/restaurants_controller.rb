@@ -3,7 +3,7 @@ class RestaurantsController < ApplicationController
   def find
     lat = params['latitude']
     lng = params['longtitude']
-    res = HTTParty.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{lat},#{lng}&radius=1500&type=restaurant,open_now&key=AIzaSyAGQ6cQ8nTlmwHb8zxc3is44Tu_cTOrUxA")
+    res = HTTParty.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{lat},#{lng}&radius=1500&type=restaurant,open_now&key=#{ENV['GOOGLE_API_SERVER_KEY']}")
 
 
     case response.code
@@ -20,7 +20,6 @@ class RestaurantsController < ApplicationController
     #generate random number to select restaurant
     rdm = rand(0..(res['results'].count - 1))
 
-    # photo = HTTParty.get("https://maps.googleapis.com/maps/api/place/photo?maxwidth=#{width}&photoreference=#{photo_reference}&key=AIzaSyAGQ6cQ8nTlmwHb8zxc3is44Tu_cTOrUxA")
 # byebug
     #Restaurant details
     @@restaurant_name = res['results'][rdm]['name']
