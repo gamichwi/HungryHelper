@@ -38,7 +38,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    render 'show', locals: {restaurant_name: @@restaurant_name, restaurant_address: @@restaurant_address, restaurant_rating: @@restaurant_rating, photo_reference: @@photo_reference}
+    render 'show', locals: {restaurant_name: @@restaurant_name, restaurant_address: @@restaurant_address, restaurant_rating: @@restaurant_rating, photo_reference: @@photo_reference, restaurant_directions: "tbc", restaurant_place_id: @@restaurant_place_id}
   end
 
 end
