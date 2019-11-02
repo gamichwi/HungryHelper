@@ -47,6 +47,10 @@ class RestaurantsController < ApplicationController
     redirect_to restaurants_show_path, notice: 'A favourite was successfully created.'
   end
 
+  def showfavourites
+    @favourites = Favourite.all
+  end
+
   def favourite_params
     params.require(:favourite).permit(:restaurant_name, :restaurant_address, :restaurant_rating, :restaurant_directions, :restaurant_place_id, :photo_reference)
   end

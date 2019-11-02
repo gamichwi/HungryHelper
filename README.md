@@ -1,24 +1,46 @@
-# README
+# HungryHelper 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Application Overview
 
-Things you may want to cover:
+The Overview of this project was to create a simple tool for people to find nearby places to eat.
 
-* Ruby version
+## TECHNOLOGIES & RESOURCES USED
+* Ruby & Ruby on Rails
+* HTML/CSS
+* Javascript
+* Jquery
+* HTTParty
+* Geocoder
+* Bcrypt
+* Turbolinks
+* Figaro
+* Materialize
+* Bootstrap
+* Google Places API
 
-* System dependencies
+## CORE REQUIREMENTS
+The Core requirements set out for this project where the following:
 
-* Configuration
+* **Models.** A minimum of 3 models with appropriate associations.
+* **Views.** Use partial views to avoid DRY practices.
+* **Handles invalid data.** Appropriate form handlers to validate data or notify users of invalid data.
+* **Use Gems** Include Ruby Gems that utilise API Calls.
+* **User Login.** Basic User Authentication
 
-* Database creation
+## PLANNING & DELIVERABLES
+* **Scope -** AIM: The aim of the project was to build a simple tool for finding nearby restaurants that are open.
+Features: User log-in, search history, favourite restaurants, google results for open restaurants in a proximity of a location.
+Implementation Period: 2 Weeks
 
-* Database initialization
+## CHALLENGE ADD-ONS (Achieved)
+* **Front-end Framework.** Used Bootstrap, Materialize, and Turbolinks
 
-* How to run the test suite
+## PROBLEMS FACED
+* Followed a tutorial to get an understanding of how google API's work and created a large amount of work that didn't integrate well with my application.
+* Didn't stick to wireframe process and ended up making a convoluted application path
+* Didn't allocate the correct amount of time to project
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## FURTHER IMPROVEMENTS
+* Ensure favourites and history are user specific
+* Add direction link to restaurant
+* Improve styling 
