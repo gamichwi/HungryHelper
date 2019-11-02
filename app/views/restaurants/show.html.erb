@@ -1,6 +1,7 @@
 <div class="flexbox">
   <div class="polaroid">
-    <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=&key=<%= ENV['GOOGLE_API_SERVER_KEY'] %>" alt="<%= restaurant_name %>" , align="middle"</img>
+    <p id="notice"><%= notice %></p>
+    <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=<%= photo_reference %>&key=<%= ENV['GOOGLE_API_SERVER_KEY'] %>" alt="<%= restaurant_name %>" , align="middle"</img>
     <div class="container">
       <p><br>
 

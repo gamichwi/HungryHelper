@@ -24,7 +24,7 @@
     </div>
 <div class="userControls">
       <% if current_user %>
-        Signed is as <%= current_user.name %> | <%= link_to "HungryPlaces", '/autocompletes/' %> | <%= link_to "Logout", '/logout' %>
+        Signed is as <%= current_user.name %> | <%= link_to "HungryPlaces", '/autocompletes/' %> | <%= link_to "Favourites", show_favourites_path %>  <%= link_to "Logout", '/logout' %>
       <% else %>
         <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
       <% end %>
@@ -32,10 +32,8 @@
     </div>
   </nav>
   <body>
-  <div class = "wrapper">
   <%= yield %>
   <%= javascript_include_tag 'application' %>
-  </div>
     <footer>
       <nav class="navbar navbar-dark bg-dark fixed-bottom">
         <p><a id="gavin" href="http://www.gavins.xyz" target="_blank">Built by Gavin.</a></p>

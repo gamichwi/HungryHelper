@@ -44,7 +44,7 @@ class RestaurantsController < ApplicationController
   def favourite
     favourite = Favourite.new(favourite_params)
     favourite.save
-    redirect_to '/'
+    redirect_to restaurants_show_path, notice: 'A favourite was successfully created.'
   end
 
   def favourite_params
