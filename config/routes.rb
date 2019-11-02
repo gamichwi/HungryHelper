@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   post 'restaurants/find' => 'restaurants#find', :as =>'restaurants'
   get 'restaurants/show' => 'restaurants#show'
+  post 'restaurants/favourite' => 'restaurants#favourite', :as => 'restaurant_favourite'
+
 
   resources :autocompletes
   root to: 'autocompletes#new'

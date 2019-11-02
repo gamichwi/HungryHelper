@@ -1,1 +1,5 @@
-hello world!
+<div class="flexbox">
+  <h1>Where are you?</h1>
+  <%= render 'form', favourite: @favourite%>
+  <%= link_to 'Choose from your previous HungryPlaces favourites', favourites_path %>
+</div>

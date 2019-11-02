@@ -41,4 +41,14 @@ class RestaurantsController < ApplicationController
     render 'show', locals: {restaurant_name: @@restaurant_name, restaurant_address: @@restaurant_address, restaurant_rating: @@restaurant_rating, photo_reference: @@photo_reference, restaurant_directions: "tbc", restaurant_place_id: @@restaurant_place_id}
   end
 
+  def favourite
+    favourite = Favourite.new(favourite_params)
+    favourite.save
+    redirect_to '/'
+  end
+
+  def favourite_params
+    params.require(:favourite).permit(:restaurant_name, :restaurant_address, :restaurant_rating, :restaurant_directions, :restaurant_place_id, :photo_reference)
+  end
+
 end

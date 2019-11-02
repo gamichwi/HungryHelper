@@ -1,8 +1,9 @@
 <div class="flexbox">
   <div class="polaroid">
-    <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=&key=<%= ENV['GOOGLE_API_SERVER_KEY'] %>" alt="<%= restaurant_name %>", align="middle"</img>
+    <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=&key=<%= ENV['GOOGLE_API_SERVER_KEY'] %>" alt="<%= restaurant_name %>" , align="middle"</img>
     <div class="container">
       <p><br>
+
         <strong>Restaurant name:</strong>
         <%= restaurant_name %>
         <br><br>
@@ -15,23 +16,20 @@
         <strong>Restaurant directions:</strong>
         <br><br></p>
 
-<!--      to save to table-->
-
-      <%= form_with(url: restaurants_path) do |form| %>
-
-      <%#= form.hidden_field :latitude, value: @autocomplete.latitude %>
-
-
-      <%= form.hidden_field :restaurant_name, value: restaurant_name %>
-      <%= form.hidden_field :restaurant_address, value: restaurant_address %>
-      <%= form.hidden_field :restaurant_rating, value: restaurant_rating %>
-      <%= form.hidden_field :restaurant_directions, value: restaurant_directions %>
-      <%= form.hidden_field :restaurant_place_id, value: restaurant_place_id %>
-      <%= form.hidden_field :photo_reference, value: photo_reference %>
+      <!--      to save to table-->
+      <%= form_for :favourite, url: restaurant_favourite_path do |form| %>
+        <%= form.hidden_field :restaurant_name, value: restaurant_name %>
+        <%= form.hidden_field :restaurant_address, value: restaurant_address %>
+        <%= form.hidden_field :restaurant_rating, value: restaurant_rating %>
+        <%= form.hidden_field :restaurant_directions, value: restaurant_directions %>
+        <%= form.hidden_field :restaurant_place_id, value: restaurant_place_id %>
+        <%= form.hidden_field :photo_reference, value: photo_reference %>
+        <%= form.submit "Favourite" %>
       <% end %>
+
+      <!--    </div>-->
 
     </div>
 
   </div>
-
 </div>
